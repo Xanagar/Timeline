@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xanagar Business Plan Timeline</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="icon" type="image/png" href="favicon.png" sizes="16x16" />
+</head>
+<body>
+
+
+<section class="intro">
+    <div class="container">
+        <h1>Xanagar Business Plan Timeline &darr;</h1>
+    </div>
+</section>
+
+
+
+
+
+<section class="timeline">
+    <ul>
+        <li>
+            <div>
+                <time>July 23</time> Set up new hosting through AWS and Google (email through GSuite and Web hosting through EC2)
+            </div>
+        </li>
+        <li>
+            <div>
+                <time>July 26</time> Push Millner Woodruff Site to live (with all DB connections functional)
+            </div>
+        </li>
+        <li>
+            <div>
+                <time>July 30</time> Publish Xanagar Public Site V1.0
+            </div>
+        </li>
+        <li>
+            <div>
+                <time>August 5</time> Finalize all LLC incorporation
+            </div>
+        </li>
+        <li>
+            <div>
+                <time>August 12</time> Spend the week of August 5th-12th tying up any "loose ends" before beginning public marketing
+            </div>
+        </li>
+        <li>
+            <div>
+                <time>August 13</time> Begin Outreach to find new client (cold "calls" with sample sites), sell full site package for $500-700
+            </div>
+        </li>
+        <li>
+            <div>
+                <time>August 20</time> Work on material for second client site and work on branding content.
+            </div>
+        </li>
+        <li>
+            <div>
+                <time>August 31</time> Publish 2nd client site and repeat process for third client (charge $700-900)
+            </div>
+        </li>
+        <li>
+            <div>
+                <time>September 15</time> Begin outreach to hire part-time hourly developers (devs start at $10/hour and must push their work to their branch of the repository every hour to receive credit for work)
+            </div>
+        </li>
+        <li>
+            <div>
+                <time>October 1</time> Aim to have successfully served 5 clients at this point and have $2500-3000 in expendable revenue, successfully take on and complete 3 clients in the month of October
+            </div>
+        </li>
+    </ul>
+</section>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+
+<script>
+
+    $(document).ready(function() {
+        (function () {
+
+            'use strict';
+
+            // define variables
+            var items = document.querySelectorAll(".timeline li");
+
+            // check if an element is in viewport
+            // http://stackoverflow.com/questions/123999/how-to-tell-if-a-dom-element-is-visible-in-the-current-viewport
+            function isElementInViewport(el) {
+                var rect = el.getBoundingClientRect();
+                return (
+                    rect.top >= 0 &&
+                    rect.left >= 0 &&
+                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+                );
+            }
+
+            function callbackFunc() {
+                for (var i = 0; i < items.length; i++) {
+                    if (isElementInViewport(items[i])) {
+                        items[i].classList.add("in-view");
+                    }
+                }
+            }
+
+            // listen for events
+            window.addEventListener("load", callbackFunc);
+            window.addEventListener("resize", callbackFunc);
+            window.addEventListener("scroll", callbackFunc);
+
+        })();
+
+    });
+
+</script>
+</body>
+</html>
